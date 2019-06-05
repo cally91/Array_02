@@ -2,7 +2,7 @@ package com.biz.Lotto;
 
 import java.util.Random;
 
-public class Lotto_02 {
+public class Lotto_03 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -37,6 +37,21 @@ public class Lotto_02 {
 			}
 
 		}
+		for (int i = 0; i < num.length; i++) {
+			System.out.print(num[i] + "\t");
+		}
+		// 생성된 6개의 lottoNum을 순서대로 정렬
+		for (int i = 0; i < num.length; i++) {
+			for (int j = i + 1; j < num.length; j++) {
+				if (num[i] > num[j]) {
+					int _temp = num[i];
+					num[i] = num[j];
+					num[j] = _temp;
+				}
+			}
+
+		}
+		System.out.println();
 		for (int i = 0; i < num.length; i++) {
 			System.out.print(num[i] + "\t");
 		}
